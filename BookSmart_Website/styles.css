@@ -1,0 +1,414 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333; /* keep the header and footer background color as is */
+}
+
+header {
+    position: relative;
+    height: 300px; /* adjust the height to your liking */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #011f55;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* replace with your image file */
+    background-position: center;
+    background-size: cover;
+    opacity: 1; /* adjust the value to your liking (0 = fully transparent, 1 = fully opaque) */
+}
+
+.container {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 2; /* make sure the container is on top of the background image */
+    background-color: rgba(255, 255, 255, );
+    backdrop-filter: blur(4px);
+    padding: 43px; /* add some padding to the container */
+    text-align: center;
+    opacity: 0.9;
+    
+    
+}
+
+
+
+.text{
+    
+    overflow: hidden;
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    animation: typing 3s steps(40,end) ;
+    display: inline-block; 
+    animation:cursor .4s step-end infinte alternate;
+    width: 100%;
+   
+   
+}
+
+@keyframes cursor{
+    50% {border-color: transparent;}
+}
+
+@keyframes typing{
+    from{
+        width: 0;      
+    }
+    to{
+        width: 50%;      
+    }
+}
+header h1 {
+    margin-top:5rem ;
+    font-size: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.hotels p{
+    color: #d3d4d4;
+}
+h2 {
+    color: #e3dddd;
+    font-size: 30px;
+    font-weight: bold;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+main {
+    background-image: url('https://images.unsplash.com/photo-1517840901100-8179e982acb7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjBib29raW5nfGVufDB8fDB8fHww'); /* replace with your image file */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* adjust the height to your liking */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    background-blend-mode: lighten;
+}
+
+main > * {
+    padding: 0; /* remove padding from direct child elements */
+}
+
+.cities, .hotels {
+    padding: 3px; /* add some padding to popular cities and hotels sections */
+    background-color: transparent; /* make the background color transparent */
+    border-radius: 10px;
+    box-shadow: none;
+    align-items: center /* remove box shadow */
+}
+
+.cities ul, .hotels ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center
+}
+
+.container1 {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    position: relative;
+    z-index: 100; /* make sure the container is on top of the background image */
+    backdrop-filter: blur(50px);
+    text-align: center;
+    opacity: 0.9;
+    margin-right:10px;
+    
+}
+
+.cities li, .hotels li {
+    margin: 20px;
+    width: 250px; 
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(238, 234, 234, 0.1);
+    transition: transform 0.3s;
+}
+
+.cities li:hover, .hotels li:hover {
+    transform: scale(1.05); /* scale up on hover */
+    box-shadow: 0 0 20px rgba(238, 234, 234, 0.3); /* increase box shadow on hover */
+    cursor: pointer; /* change cursor to pointer on hover */
+
+}
+
+.cities li span, .hotels li span {
+    font-weight: bold; /* make the text bold */
+    letter-spacing: 0.5px; /* add some letter spacing for a crisp effect */
+    text-shadow: 0 1px 1px rgba(113, 111, 111, 0.5), /* add a subtle white shadow */
+                 0 2px 2px rgba(200, 200, 200, 0.2); /* add a darker shadow to create depth */
+
+}
+.cities img, .hotels img {
+    width: 100%;
+    height: 150px; /* adjust height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cities h3, .hotels h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    align-items: center;
+    color: #cac5c5;
+}
+
+
+footer {
+    width: 113%;
+    background-color: #5e5a5a;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+    font-size: 14px;
+}
+
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        width: 126%;
+        background-color: #5e5a5a;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        clear: both;
+        font-size: 14px;
+    }
+    .bg-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* replace with your image file */
+    background-position: center;
+    background-size: cover;
+    opacity: 1; /* adjust the value to your liking (0 = fully transparent, 1 = fully opaque) */
+}
+    main {
+    background-image: url('https://images.unsplash.com/photo-1517840901100-8179e982acb7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjBib29raW5nfGVufDB8fDB8fHww'); /* replace with your image file */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 62.4vh;  /* adjust the height to your liking */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    background-blend-mode: lighten;
+}
+
+    .cities, .hotels {
+        padding: 5px; /* add some padding to popular cities and hotels sections */
+        background-color: transparent; /* make the background color transparent */
+        border-radius: 10px;
+        box-shadow: none;
+        align-items: center /* remove box shadow */
+    }
+    
+    .cities ul, .hotels ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center
+    }
+        .container {
+          width: 100%; /* make the container narrower on smaller screens */
+          padding: 2.5rem; /* reduce padding on smaller screens */
+          display: block; /* display horizontally on smaller screens */
+          vertical-align: top; /* align containers vertically */
+           /* reduce margin between containers */
+        }
+      
+        .container1 {
+          width: 40%; /* make the container narrower on smaller screens */
+          margin-right: 0; /* remove margin on smaller screens */
+          display: inline-block; /* display horizontally on smaller screens */
+          horizontally-align: top; /* align containers vertically */
+          margin: 2px;
+          height: 9rem; 
+          align-items: center;/* reduce margin between containers *
+        }
+            
+        /* Add flexbox to make the containers display like cards */
+        
+      
+        
+      }
+      .cities li, .hotels li {
+        
+        width: 9rem; 
+        
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(238, 234, 234, 0.1);
+        transition: transform 0.3s;
+    }
+    
+    .cities li:hover, .hotels li:hover {
+        transform: scale(1.05); /* scale up on hover */
+        box-shadow: 0 0 20px rgba(238, 234, 234, 0.3); /* increase box shadow on hover */
+        cursor: pointer; /* change cursor to pointer on hover */
+    
+    }
+    
+    .cities li span, .hotels li span {
+        font-weight: bold; /* make the text bold */
+        letter-spacing: 0.5px; /* add some letter spacing for a crisp effect */
+        text-shadow: 0 1px 1px rgba(113, 111, 111, 0.5), /* add a subtle white shadow */
+                     0 2px 2px rgba(200, 200, 200, 0.2); /* add a darker shadow to create depth */
+    
+    }
+    .cities img, .hotels img {
+        width: 100%;
+        height: 4rem; /* adjust height as needed */
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    .cities h3, .hotels h3 {
+        font-size: 14px;
+        margin-top: 10px;
+        align-items: center;
+        color: #cac5c5;
+    }
+    .hotels p{
+        font-size: 10px;
+    }
+    
+  }
+  
+  
+  /* For screens between 768px and 1024px (e.g., tablets) */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    main {
+        background-image: url('https://images.unsplash.com/photo-1517840901100-8179e982acb7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjBib29raW5nfGVufDB8fDB8fHww'); /* replace with your image file */
+        background-size: cover;
+        background-position: center;
+        height: 190vh; /* adjust the height to your liking */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        background-blend-mode: lighten;
+    }
+    .cities, .hotels {
+        padding: 5px; /* add some padding to popular cities and hotels sections */
+        background-color: transparent; /* make the background color transparent */
+        border-radius: 10px;
+        box-shadow: none;
+        align-items: center /* remove box shadow */
+    }
+    
+    .cities ul, .hotels ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center
+    }
+        .container {
+          width: 100%; /* make the container narrower on smaller screens */
+          padding: 2.5rem; /* reduce padding on smaller screens */
+          display: block; /* display horizontally on smaller screens */
+          vertical-align: top; /* align containers vertically */
+          margin: 5px; /* reduce margin between containers */
+        }
+      
+        .container1 {
+          width: 40%; /* make the container narrower on smaller screens */
+          margin-right: 0; /* remove margin on smaller screens */
+          display: inline-block; /* display horizontally on smaller screens */
+          horizontally-align: top; /* align containers vertically */
+          margin: 2px;
+          height: 16rem; 
+          align-items: center;/* reduce margin between containers *
+        }
+            
+        /* Add flexbox to make the containers display like cards */
+        
+      
+        
+      }
+      .cities li, .hotels li {
+        
+        width: 17rem; 
+        
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(238, 234, 234, 0.1);
+        transition: transform 0.3s;
+    }
+    
+    .cities li:hover, .hotels li:hover {
+        transform: scale(1.05); /* scale up on hover */
+        box-shadow: 0 0 20px rgba(238, 234, 234, 0.3); /* increase box shadow on hover */
+        cursor: pointer; /* change cursor to pointer on hover */
+    
+    }
+    
+    .cities li span, .hotels li span {
+        font-weight: bold; /* make the text bold */
+        letter-spacing: 0.5px; /* add some letter spacing for a crisp effect */
+        text-shadow: 0 1px 1px rgba(113, 111, 111, 0.5), /* add a subtle white shadow */
+                     0 2px 2px rgba(200, 200, 200, 0.2); /* add a darker shadow to create depth */
+    
+    }
+    .cities img, .hotels img {
+        width: 100%;
+        height: 9rem; /* adjust height as needed */
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .cities h3, .hotels h3 {
+        font-size: 14px;
+        margin-top: 10px;
+        align-items: center;
+        color: #cac5c5;
+    }
+    .hotels p{
+        font-size: 10px;
+    }
+  }
+  
+  
+
+  
+  
